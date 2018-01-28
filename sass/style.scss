@@ -1,6 +1,19 @@
+@import "grid";
+@import "colors";
 @import "mixins";
 @import "fonts";
+@import "menu";
 
 * {
   @include reset;
+  font-family: 'Itim', Arial, sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: $color-bgd;
+}
+
+.logo {
+  @include center;
 }

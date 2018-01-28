@@ -1,0 +1,50 @@
+@import "colors";
+@import "animations";
+
+.menu {
+  list-style: none;
+}
+
+.menu-item {
+
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  &:hover>.submenu {
+    display: flex;
+    flex-flow: column;
+    margin-top: 50px;
+    position: absolute;
+    list-style: none;
+    @include animateSubmenu;
+  }
+  &:hover {
+    background-color: $color-items;
+  }
+  a {
+    font-size: 1.5rem;
+    color: $color-txt;
+    text-decoration: none;
+    &:hover {
+        color: $color-txt-hover;
+
+      }
+  }
+  .submenu {
+    margin-top: 12px;
+    display: none;
+    .submenu-item {
+      background-color: $color-items;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      padding: 5px;
+      margin: auto;
+      width:250px;
+      a{
+        font-size: 1rem;
+      }
+    }
+  }
+}
