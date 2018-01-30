@@ -17,3 +17,19 @@ body {
 .logo {
   @include center;
 }
+
+.main-slider{
+  ul{
+    list-style: none;
+  }
+
+  li{
+    display: none;
+  }
+  button {
+    font-size: 3rem;
+  }
+  .visible{
+    display: inline-block;
+  }
+}

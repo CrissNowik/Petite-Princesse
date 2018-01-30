@@ -6,7 +6,6 @@
 }
 
 .menu-item {
-
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
@@ -15,7 +14,7 @@
   &:hover>.submenu {
     display: flex;
     flex-flow: column;
-    margin-top: 50px;
+    margin-top: 35px;
     position: absolute;
     list-style: none;
     @include animateSubmenu;
@@ -24,7 +23,7 @@
     background-color: $color-items;
   }
   a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: $color-txt;
     text-decoration: none;
     &:hover {

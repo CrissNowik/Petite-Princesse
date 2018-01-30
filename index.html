@@ -7,6 +7,7 @@
 		<meta name="viewport" content="initial-scale=1">
 			<title>Petite Princesse</title>
 		<link rel="stylesheet" href="css/style.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="js/app.js" type="text/javascript"></script>
 	</head>
@@ -19,31 +20,46 @@
     </div>
     <nav class="row menu">
       <ul class="col-2 menu-item">
-        <p><a href="#">Strona główna</a></p>
+        <p><a href="#"><i class="fas fa-home"></i>   Strona główna </a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#">Najnowsze</a></p>
+        <p><a href="#"><i class="fas fa-certificate"></i>   Najnowsze</a></p>
         <ul class="submenu">
           <li class="submenu-item"><a href="#">Kokardki</a></li>
           <li class="submenu-item"><a href="#">Opaski</a></li>
           <li class="submenu-item"><a href="#">Ozdoby</a></li>
-          <li class="submenu-item"><a href="#">Gumki</a></li>          
+          <li class="submenu-item"><a href="#">Gumki</a></li>
         </ul>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#">Galeria</a></p>
+        <p><a href="#"><i class="fas fa-camera"></i></i>   Galeria</a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#">Blog</a></p>
+        <p><a href="#"><i class="fas fa-book"></i>   Blog</a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#">O mnie</a></p>
+        <p><a href="#"><i class="fas fa-user"></i>   O mnie</a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#">Kontakt</a></p>
+        <p><a href="#"><i class="fas fa-phone"></i>   Kontakt</a></p>
       </ul>
     </nav>
   </header>
+	<main class="container">
+		<div class="row">
+			<div class="col-12 main-slider">
+				<div class="slider">
+					<button id="prevPicture"><</button>
+			    <ul>
+			        <li><img src="pics/1.jpg"></li>
+			        <li><img src="pics/2.jpg"></li>
+			        <li><img src="pics/3.jpg"></li>
+			    </ul>
+    			<button id="nextPicture">></button>
+				</div>
+			</div>
+		</div>
+	</main>
     <footer>
         <p>Created by <a href="https://github.com/CrissNowik" target="_blank">CrissNowik</a></p>
     </footer>
