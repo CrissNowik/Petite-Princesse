@@ -1,5 +1,5 @@
-@import "colors";
-@import "animations";
+@import "../colors";
+@import "../animations";
 
 .menu {
   list-style: none;
@@ -11,6 +11,7 @@
   border-radius: 10px;
   display: flex;
   justify-content: center;
+  @include shadow;
   &:hover>.submenu {
     display: flex;
     flex-flow: column;
@@ -18,6 +19,7 @@
     position: absolute;
     list-style: none;
     @include animateSubmenu;
+    z-index: 2;
   }
   &:hover {
     background-color: $color-items;
@@ -26,10 +28,6 @@
     font-size: 1rem;
     color: $color-txt;
     text-decoration: none;
-    &:hover {
-        color: $color-txt-hover;
-
-      }
   }
   .submenu {
     margin-top: 12px;
@@ -41,8 +39,12 @@
       padding: 5px;
       margin: auto;
       width:250px;
+      @include shadow;
       a{
         font-size: 1rem;
+        &:hover {
+            color: $color-txt-hover;
+          }
       }
     }
   }

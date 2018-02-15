@@ -1,33 +1,32 @@
 $(document).ready(function(){
 
-  let next = $("#nextPicture");
-  let prev = $("#prevPicture");
-  let list = $(".slider > ul").children();
-  let counter = 0;
-
-  list[counter].classList.add("visible")
-
-  next.click(goNext);
-  prev.click(goPrev);
-
-  function goNext() {
-
-      console.log("goNext");
-      list[counter].classList.remove("visible");
-      if (counter < list.length-1) {
-        counter++;
-      }
-      list[counter].classList.add("visible");
-  };
-
-  function goPrev() {
-      console.log("goPrev");
-      list[counter].classList.remove("visible");
-      if (counter > 0) {
-        counter--;
-      }
-      list[counter].classList.add("visible");
-  };
+  $('.owl-carousel').owlCarousel({
+    center: true,
+    animateOut: 'fadeOut',
+    autoplay: true,
+    autoplayTimeout:5000,
+    loop:true,
+    margin:0,
+    nav:true,
+    navText: ["<", ">"],
+    responsive:{
+        0:{
+            items:1,
+            nav:true,
+            autoplay: true,
+        },
+        600:{
+            items:1,
+            nav:true,
+            autoplay: true,
+        },
+        1000:{
+            items:1,
+            nav:true,
+            autoplay: true,
+        }
+    }
+})
 
 
 }); /*doc.ready.func END*/

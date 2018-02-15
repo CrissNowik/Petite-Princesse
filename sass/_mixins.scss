@@ -11,3 +11,23 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin shadow {
+  -webkit-box-shadow: 11px 13px 9px 4px rgba(0,0,0,0.50);
+  -moz-box-shadow: 11px 13px 9px 4px rgba(0,0,0,0.50);
+  box-shadow: 11px 13px 9px 4px rgba(0,0,0,0.50);
+
+}
+
+@mixin owlNavBtn {
+  margin:10px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 0px 20px 10px 20px;
+  @include shadow;
+  @include center;
+  &:hover {
+    background-color: $color-items;
+}
+}

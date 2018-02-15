@@ -2,7 +2,8 @@
 @import "colors";
 @import "mixins";
 @import "fonts";
-@import "menu";
+@import "partials/menu";
+@import "partials/main-slider";
 
 * {
   @include reset;
@@ -19,17 +20,8 @@ body {
 }
 
 .main-slider{
-  ul{
-    list-style: none;
-  }
-
-  li{
-    display: none;
-  }
-  button {
-    font-size: 3rem;
-  }
-  .visible{
-    display: inline-block;
+  @include center;
+  .slider {
+    display: flex;
   }
 }
