@@ -1,6 +1,12 @@
 @import "../colors";
 @import "../mixins";
 
+.main-slider{
+  @include center;
+  .slider {
+    display: flex;
+  }
+}
 
 .owl-stage-outer {
   @include shadow;

@@ -19,6 +19,13 @@
 
 }
 
+@mixin gradientPrefix {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#ffffff), color-stop(#f7f1ff), color-stop(#f5e2ff), color-stop(#f7d1ff), to(#fcbffc));
+  background-image: -webkit-linear-gradient(right top, #ffffff, #f7f1ff, #f5e2ff, #f7d1ff, #fcbffc);
+  background-image: -o-linear-gradient(right top, #ffffff, #f7f1ff, #f5e2ff, #f7d1ff, #fcbffc);
+  background-image: linear-gradient(to left bottom, #ffffff, #f7f1ff, #f5e2ff, #f7d1ff, #fcbffc);
+}
+
 @mixin owlNavBtn {
   margin:10px;
   background-color: #fff;
@@ -29,5 +36,5 @@
   @include center;
   &:hover {
     background-color: $color-items;
-}
+  }
 }
