@@ -2,6 +2,7 @@
 @import "../mixins";
 
 .main-slider{
+  margin-top: 50px;
   @include center;
   .slider {
     display: flex;
@@ -18,7 +19,8 @@
 }
 .owl-nav {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
+  right: 30px;
   color: $color-txt;
   display:inline-flex;
   justify-content: space-between;

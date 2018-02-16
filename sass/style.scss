@@ -19,3 +19,45 @@ body {
 .logo {
   @include center;
 }
+
+.box{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .box--item{
+    cursor: pointer;
+    background-color: #fff;
+    @include shadow;
+    border: 10px double $color-items;
+    border-radius: 10px;
+    color: $color-txt;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .box--item-tit {
+      font-size: 2.5rem;
+    }
+    .box--item-par {
+      font-size: 1rem;
+    }
+    .box--item-btn {
+        @include owlNavBtn;
+        color: $color-txt;
+        cursor: pointer;
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .icon {
+      font-size: 5rem;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .box--item-center{
+    @extend .box--item;
+    background-color: $color-txt-hover;
+  }
+}

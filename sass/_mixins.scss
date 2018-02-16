@@ -27,11 +27,12 @@
 }
 
 @mixin owlNavBtn {
-  margin:10px;
+  margin:5px;
   background-color: #fff;
+  border: 1px solid $color-items;
   border-radius: 10px;
-  font-size: 2rem;
-  padding: 0px 20px 10px 20px;
+  font-size: 1rem;
+  padding: 0px 20px;
   @include shadow;
   @include center;
   &:hover {
