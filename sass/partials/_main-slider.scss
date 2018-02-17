@@ -25,9 +25,9 @@
   display:inline-flex;
   justify-content: space-between;
     .owl-prev{
-    @include owlNavBtn;
+    @include Btn;
   }
     .owl-next {
-    @include owlNavBtn;
+    @include Btn;
   }
 }
