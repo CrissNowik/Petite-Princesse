@@ -1,11 +1,15 @@
 @import "../colors";
+@import "../animations";
 @import "../mixins";
+
 
 .main-slider{
   margin-top: 50px;
+
   @include center;
   .slider {
     display: flex;
+    z-index: 2;
   }
 }
 

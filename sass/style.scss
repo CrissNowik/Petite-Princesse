@@ -2,8 +2,11 @@
 @import "colors";
 @import "mixins";
 @import "fonts";
+
 @import "partials/menu";
 @import "partials/main-slider";
+@import "partials/gallery";
+@import "partials/welcome-3boxes";
 
 * {
   @include reset;
@@ -23,72 +26,4 @@ body {
 hr{
   border: 1px solid $color-txt;
   margin-bottom: 2px;
-}
-
-.box{
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  .box-item{
-    cursor: pointer;
-    background-color: #fff;
-    border: 10px double $color-txt;
-    border-radius: 10px;
-    color: $color-txt;
-    height: 400px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @include shadow;
-    &:hover {
-      @include animateBox;
-    }
-    .box-item--tit {
-      font-size: 2.5rem;
-    }
-    .box-item--par {
-      font-size: 1rem;
-    }
-    .box-item--btn {
-        @include Btn;
-        color: $color-txt;
-        cursor: pointer;
-        padding: 10px;
-        margin: 20px auto;
-    }
-    .icon {
-      font-size: 5rem;
-      display: inline-block;
-      width: 100%;
-    }
-  }
-}
-
-.welcome{
-  margin-top: 50px;
-  text-align: center;
-  color: $color-txt;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .welcome-header{
-    color: #fff;
-    font-size: 3rem;
-    margin: 1rem;
-  }
-  .welcome-motto {
-    margin: 1rem;
-  }
-  .welcome-motto--sub{
-    font-size: 1.5rem;
-  }
-  .welcome-btn {
-    @include Btn;
-    color: $color-txt;
-    cursor: pointer;
-    padding: 15px 45px;
-    margin: 20px auto;
-  }
 }

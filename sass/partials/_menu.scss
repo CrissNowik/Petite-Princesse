@@ -1,5 +1,6 @@
 @import "../colors";
 @import "../animations";
+@import "../mixins";
 
 .menu {
   list-style: none;
@@ -21,7 +22,7 @@
       position: absolute;
       list-style: none;
       @include animateSubmenu;
-      z-index: 2;
+      z-index: 3;
     }
     &:hover {
       background-color: $color-items;
