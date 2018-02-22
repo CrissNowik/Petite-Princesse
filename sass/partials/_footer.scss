@@ -1,0 +1,151 @@
+@import "../colors";
+@import "../animations";
+@import "../mixins";
+
+.footer {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  color: $color-txt;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.leftSide {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  color: $color-txt;
+}
+
+.rightSide {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.item {
+  list-style: none;
+  margin: 10px 0;
+  text-align: left;
+  &:hover {
+
+  }
+  a {
+    text-decoration: none;
+    color: $color-txt;
+    &:hover {
+      color: $color-txt-hover;
+      background-color: $color-items;
+      border: 1px solid $color-items;
+      border-radius: 10px;
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  }
+}
+
+.media {
+  width: 50%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  p {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  a {
+    text-decoration: none;
+      &:hover {
+          color: $color-txt;
+        }
+  }
+}
+
+.column {
+  padding: 40px 0;
+  .column-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.copyright{
+  padding: 10px 0;
+  display: flex;
+  order: 9;
+  p,a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    color: $color-txt;
+  }
+}
+
+.media-icon {
+    &:hover {
+      @include animateBtn;
+    }
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+}
+
+.fa-twitter-square{
+  color: #1da1f2;
+}
+
+.fa-google-plus-square{
+  color: #dd4b39;
+}
+
+.fa-envelope{
+  color: $color-items;
+}
+
+@media screen and (max-width: 990px) {
+  .leftSide {
+    flex-wrap: wrap;
+    width: 100%;
+    order: 2;
+  }
+  .listColumn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    padding: 0 30px;
+  }
+  .rightSide {
+    width: 100%;
+    order: 1;
+  }
+  .media {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .leftSide{
+    flex-wrap: wrap;
+    width: 100%;
+    order: 2;
+  }
+  .listColumn {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    padding: 0 30px;
+  }
+  .rightSide {
+    width: 100%;
+    order: 1;
+  }
+  .media {
+    width: 25%;
+  }
+}
