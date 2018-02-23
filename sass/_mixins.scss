@@ -1,50 +1,83 @@
 @import "animations";
 
-@mixin reset {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-@mixin center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin shadow {
-  -webkit-box-shadow: 11px 13px 9px 4px rgba(162,45,162,0.50);
-  -moz-box-shadow: 11px 13px 9px 4px rgba(162,45,162,0.50);
-  box-shadow: 11px 13px 9px 4px rgba(162,45,162,0.50);
-
-}
-
-@mixin gradientPrefix {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#ffffff), color-stop(#f7f1ff), color-stop(#f5e2ff), color-stop(#f7d1ff), to(#fcbffc));
-  background-image: -webkit-linear-gradient(right top, #ffffff, #f7f1ff, #f5e2ff, #f7d1ff, #fcbffc);
-  background-image: -o-linear-gradient(right top, #ffffff, #f7f1ff, #f5e2ff, #f7d1ff, #fcbffc);
-  background-image: linear-gradient(to left bottom, #ffffff, #f7f1ff, #f5e2ff, #f7d1ff, #fcbffc);
-}
-
 @mixin Btn {
-  margin:5px;
-  background-color: #fff;
-  border: 1px solid $color-items;
-  border-radius: 10px;
-  font-size: 1rem;
-  padding: 0px 20px;
-  @include shadow;
-  @include center;
+  @include           center;
+  @include           shadow;
+  margin           : 5px;
+  padding          : 0px 20px;
+  border           : 1px solid $color-items;
+  border-radius    : 10px;
+  background-color : #fff;
+  font-size        : 1rem;
+
   &:hover {
-    background-color: $color-items;
-    @include animateBtn;
+    @include           animateBtn;
+    background-color : $color-items;
   }
 }
 
+@mixin center {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+}
+
+@mixin gradientPrefix {
+  background-image : -webkit-gradient(linear, right top, left bottom, from(#ffffff), color-stop(#f7f1ff), color-stop(#f5e2ff), color-stop(#f7d1ff), to(#fcbffc));
+  background-image : -webkit-linear-gradient(
+                       right top,
+                       #ffffff,
+                       #f7f1ff,
+                       #f5e2ff,
+                       #f7d1ff,
+                       #fcbffc
+                     );
+  background-image : -o-linear-gradient(
+                       right top,
+                       #ffffff,
+                       #f7f1ff,
+                       #f5e2ff,
+                       #f7d1ff,
+                       #fcbffc
+                     );
+  background-image : linear-gradient(
+                       to left bottom,
+                       #ffffff,
+                       #f7f1ff,
+                       #f5e2ff,
+                       #f7d1ff,
+                       #fcbffc
+                     );
+}
+
 @mixin photoInfo {
-  padding: 10px;
-  width: 100%;
-  border-radius: 15px;
-  text-align: center;
+  width         : 100%;
+  padding       : 10px;
+  border-radius : 15px;
+  text-align    : center;
+}
+
+@mixin reset {
+  box-sizing  : border-box;
+  margin      : 0;
+  padding     : 0;
+  font-family : Arial,
+                sans-serif;
+}
+
+@mixin shadow {
+  -moz-box-shadow    : 11px 13px 9px 4px rgba(162,45,162,0.50);
+  -webkit-box-shadow : 11px 13px 9px 4px rgba(162,45,162,0.50);
+  box-shadow         : 11px 13px 9px 4px rgba(162,45,162,0.50);
+}
+
+@mixin aboutContact {
+  @include           shadow;
+  margin-top       : 30px;
+  padding          : 10px;
+  color            : $color-txt;
+  border           : 1px solid $color-items;
+  border-radius    : 15px;
+  background-color : #fff;
+  font-size        : 1rem;
 }

@@ -1,30 +1,42 @@
-@import "grid";
-@import "colors";
-@import "mixins";
-@import "fonts";
+@import
+  "grid",
+  "partials/footer",
+  "partials/welcome-3boxes",
+  "partials/gallery",
+  "partials/main-slider",
+  "partials/menu",
+  "partials/about",
+  "partials/contact",
+  "fonts",
+  "mixins",
+  "colors";
 
-@import "partials/menu";
-@import "partials/main-slider";
-@import "partials/gallery";
-@import "partials/welcome-3boxes";
-@import "partials/footer";
 
 * {
-  @include reset;
-  font-family: 'Itim', Arial, sans-serif;
-  font-size: 20px;
+  @include      reset;
+  font-family : 'Itim',
+                Arial,
+                sans-serif;
+  font-size   : 20px;
 }
 
 body {
-  background-image: linear-gradient(to left bottom, #ffffff, #f7f1ff, #f5e2ff, #f7d1ff, #fcbffc);
-  @include gradientPrefix;
+  @include           gradientPrefix;
+  background-image : linear-gradient(
+                       to left bottom,
+                       #ffffff,
+                       #f7f1ff,
+                       #f5e2ff,
+                       #f7d1ff,
+                       #fcbffc
+                     );
 }
 
 .logo {
   @include center;
 }
 
-hr{
-  border: 1px solid $color-txt;
-  margin-bottom: 2px;
+hr {
+  margin-bottom : 2px;
+  border        : 1px solid $color-txt;
 }

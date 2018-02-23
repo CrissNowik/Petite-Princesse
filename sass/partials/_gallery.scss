@@ -1,58 +1,67 @@
-@import "../colors";
-@import "../animations";
-@import "../mixins";
+@import
+  "../colors",
+  "../mixins",
+  "../animations";
 
-/*Photo list*/
-$list: 1,2,3,4,5,6,7,8,9,10,11,12,13,14;
+$list   : 1,2,3,4,5,6,7,8,9,10,11,12;
+
+/* Photo list */
+
 @each $var in $list {
-
   .photo-#{$var} {
-    background-image: url("../../pics/gallery/photo-#{$var}.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 340px;
-    margin: 10px;
-    border-radius: 5%;
-    @include shadow;
+    @include              shadow;
+    height              : 340px;
+    margin              : 10px;
+    border-radius       : 5%;
+    background-image    : url("../../pics/gallery/photo-#{$var}.jpg");
+    background-position : center;
+    background-size     : cover;
+
     &:hover {
       @include gentleShow;
     }
   }
 }
 
-.gallery{
-  .gallery-header{
-    font-size: 3rem;
-    color: $color-txt;
-    z-index: 2;
+.gallery {
+  .gallery-header {
+    z-index   : 2;
+    color     : $color-txt;
+    font-size : 2rem;
   }
+
   .gallery-row {
-    display: flex;
-    justify-content: space-between;
-    .gallery-photo{
-      display: flex;
-      align-items: flex-end;
-      border: 1px solid $color-items;
-      cursor: pointer;
-      .photo-info{
-        background-color: rgba(249, 139, 249, 0.6);
-        color: $color-txt;
-        @include photoInfo;
+    display         : flex;
+    justify-content : space-between;
+
+    .gallery-photo {
+      display     : flex;
+      border      : 1px solid $color-items;
+      align-items : flex-end;
+      cursor      : pointer;
+
+      .photo-info {
+        @include           photoInfo;
+        color            : $color-txt;
+        background-color : rgba(249, 139, 249, 0.6);
       }
-      .photo-info--new{
-        background-color: rgba(238, 246, 11, 0.6);
-        color: $color-txt;
-        @include photoInfo;
+
+      .photo-info--new {
+        @include           photoInfo;
+        color            : $color-txt;
+        background-color : rgba(238, 246, 11, 0.6);
       }
-      .photo-info--hit{
-        background-color: rgba(255, 0, 0, 0.6);
-        color: #fff;
-        @include photoInfo;
+
+      .photo-info--hit {
+        @include           photoInfo;
+        color            : #fff;
+        background-color : rgba(255, 0, 0, 0.6);
       }
-      .photo-info--last{
-        background-color: rgba(162, 45, 162, 0.6);
-        color: #fff;
-        @include photoInfo;
+
+      .photo-info--last {
+        @include           photoInfo;
+        color            : #fff;
+        background-color : rgba(162, 45, 162, 0.6);
       }
     }
   }

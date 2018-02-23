@@ -1,0 +1,30 @@
+@import
+  "../colors",
+  "../mixins",
+  "../animations";
+
+.about {
+  @include aboutContact;
+
+  .about-photo {
+    @include              shadow;
+    height              : 200px;
+    float               : left;
+    margin              : 10px;
+    border-radius       : 15px;
+    background-image    : url("../../pics/chef.jpg");
+    background-position : center;
+    background-size     : cover;
+  }
+
+  .about-header {
+    font-size : 2em;
+  }
+
+  .about-info {
+    margin-top : 30px;
+    padding    : 10px;
+    text-align : justify;
+    font-size  : 1em;
+  }
+}
