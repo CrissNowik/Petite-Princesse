@@ -1,37 +1,41 @@
-@import "../colors";
-@import "../animations";
-@import "../mixins";
+@import
+  "../colors",
+  "../mixins",
+  "../animations";
 
+.main-slider {
+  @include     center;
+  margin-top : 50px;
 
-.main-slider{
-  margin-top: 50px;
-
-  @include center;
   .slider {
-    display: flex;
-    z-index: 2;
+    z-index : 2;
+    display : flex;
   }
 }
 
 .owl-stage-outer {
   @include shadow;
 }
+
 .owl-item {
   img {
-      border-radius: 10px;
+    border-radius : 10px;
   }
 }
+
 .owl-nav {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  color: $color-txt;
-  display:inline-flex;
-  justify-content: space-between;
-    .owl-prev{
+  display         : inline-flex;
+  position        : absolute;
+  right           : 30px;
+  bottom          : 30px;
+  color           : $color-txt;
+  justify-content : space-between;
+
+  .owl-prev {
     @include Btn;
   }
-    .owl-next {
+
+  .owl-next {
     @include Btn;
   }
 }

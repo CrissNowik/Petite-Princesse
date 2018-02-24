@@ -1,0 +1,47 @@
+@import
+  "../colors",
+  "../mixins",
+  "../animations";
+
+.blog {
+  .blog-header {
+    color     : $color-txt;
+    font-size : 2rem;
+  }
+
+  .blog-trailer {
+    margin-bottom : 30px;
+    text-align    : left;
+
+    .blog-trailer--header {
+      color      : $color-txt;
+      text-align : left;
+      font-size  : 1.5rem;
+    }
+
+    .blog-trailer--logo{
+      float      : right;
+      padding    : 10px;
+    }
+
+    .blog-trailer--txt {
+      margin : 30px 0;
+      color      : $color-txt;
+      text-align : justify;
+    }
+
+    .blog-trailer--btn {
+      color           : $color-txt;
+      text-decoration : none;
+
+      &:hover {
+        padding          : 0 10px;
+        color            : $color-txt-hover;
+        border           : 1px solid $color-items;
+        border-radius    : 10px;
+        background-color : $color-items;
+        font-size        : 1rem;
+      }
+    }
+  }
+}

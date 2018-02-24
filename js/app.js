@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+//main slider by OwlCarousel2
   $('.owl-carousel').owlCarousel({
     center: true,
     animateOut: 'fadeOut',
@@ -27,6 +28,22 @@ $(document).ready(function(){
         }
     }
 })
+// end of main slider by OwlCarousel2
+
+// smooth scrolling
+$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+// end smooth scrolling
 
 
 }); /*doc.ready.func END*/

@@ -12,7 +12,7 @@
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 	<body>
-  <header class="container header">
+  <header id="header" class="container header">
     <div class="row">
       <div class="col-12 logo">
         <img src="pics/logo.png" alt="Logo: Text Petite Pincesse with Crown">
@@ -20,28 +20,28 @@
     </div>
     <nav class="row menu">
       <ul class="col-2 menu-item">
-        <p><a href="#"><i class="fas fa-home"></i>   Strona główna </a></p>
+        <p><a href="#header"><i class="fas fa-home"></i> Strona główna</a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#"><i class="fas fa-certificate"></i>   Najnowsze</a></p>
+        <p><a href="#shop"><i class="fas fa-certificate"></i> Najnowsze</a></p>
         <ul class="submenu">
-          <li class="submenu-item"><a href="#">Kokardki</a></li>
-          <li class="submenu-item"><a href="#">Opaski</a></li>
-          <li class="submenu-item"><a href="#">Ozdoby</a></li>
-          <li class="submenu-item"><a href="#">Gumki</a></li>
+          <li class="submenu-item"><a href="#bow">Kokardki</a></li>
+          <li class="submenu-item"><a href="#band">Opaski</a></li>
+          <li class="submenu-item"><a href="#crown">Korony</a></li>
+          <li class="submenu-item"><a href="#gum">Gumki</a></li>
         </ul>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#"><i class="fas fa-camera"></i></i>   Galeria</a></p>
+        <p><a href="#shop"><i class="fas fa-camera"></i> Galeria</a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#"><i class="fas fa-book"></i>   Blog</a></p>
+        <p><a href="#blog"><i class="fas fa-book"></i> Blog</a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#"><i class="fas fa-user"></i>   O mnie</a></p>
+        <p><a href="#about"><i class="fas fa-user"></i> O mnie</a></p>
       </ul>
       <ul class="col-2 menu-item">
-        <p><a href="#"><i class="fas fa-phone"></i>   Kontakt</a></p>
+        <p><a href="#contact"><i class="fas fa-phone"></i> Kontakt</a></p>
       </ul>
     </nav>
   </header>
@@ -61,19 +61,19 @@
 				<span class="far fa-heart icon"></span>
 				<span class="box-item--tit" >Wykonane z miłością</span>
 				<p class="box-item--par" >Sama jestem Mamą... <br> ...i kocham nią być</p>
-				<button class="box-item--btn" type="button" name="button">Zajrzyj na Blog!</button>
+				<a href="#blog" class="box-item--btn">Zajrzyj na Blog!</a>
 		</section>
 			<section class="col-3 box-item">
 				<span class="fas fa-search icon"></span>
 				<span class="box-item--tit" >Dbałość o szczegóły</span>
 				<p class="box-item--par" >Wszystko co najlepsze dla naszych Małych Księżniczek</p>
-				<button class="box-item--btn" type="button" name="button">Zobacz najnowsze!</button>
+				<a href="#shop" class="box-item--btn">Zobacz najnowsze!</a>
 			</section>
 			<section class="col-3 box-item">
 				<span class="fas fa-gift icon"></span>
 				<span class="box-item--tit" >Dostawa gratis</span>
 				<p class="box-item--par" >Zrób zakupy za minimum 50 zł! Dostawa GRATIS!</p>
-				<button class="box-item--btn" type="button" name="button">Zamów coś!</button>
+				<a href="#contact" class="box-item--btn">Zamów coś!</a>
 			</section>
 		</div>
 		<div class="row">
@@ -88,13 +88,13 @@
 					</p>
 					<p class="welcome-motto--sub">Wszystko to znajdziecie w
 					<br>Petite Princesse.</p>
-				<button type="button" name="button" class="welcome-btn">Wybierz coś!</button>
+				<a href="#shop" class="welcome-btn">Wybierz coś!</a>
 				<hr></hr>
 				<hr></hr>
 			</section>
 		</div>
 		<div class="row">
-			<section class="col-12 gallery">
+			<section class="col-12 gallery" id="shop">
 				<h2 class="gallery-header">Sklepik - kliknij i zamów</h2>
 				<div class="row gallery-row">
 					<div class="col-4 photo-1 gallery-photo" alt="zdjęcie produktu"><p class="photo-info--new">NOWOŚĆ! Gumka muszka - 12zł</p></div>
@@ -102,64 +102,71 @@
 					<div class="col-4 photo-3 gallery-photo" alt="zdjęcie produktu"><p class="photo-info--new">NOWOŚĆ! Spinka do włosów 7zł</p></div>
 				</div>
 				<div class="row gallery-row">
-					<div class="col-4 photo-4 gallery-photo" alt="zdjęcie produktu"><p class="photo-info">Opaska Małej Gwiazdy - 15zł</p></div>
+					<div class="col-4 photo-4 gallery-photo" alt="zdjęcie produktu" id="bow"><p class="photo-info">Opaska Kokarda - 15zł</p></div>
 					<div class="col-4 photo-5 gallery-photo" alt="zdjęcie produktu"><p class="photo-info--last">OSTATNIA SZTUKA! Opaska - 15zł</p></div>
-					<div class="col-4 photo-6 gallery-photo" alt="zdjęcie produktu"><p class="photo-info">Gumka muszka - 15zł</p></div>
+					<div class="col-4 photo-6 gallery-photo" alt="zdjęcie produktu" id="gum"><p class="photo-info">Gumka muszka - 15zł</p></div>
 				</div>
 				<div class="row gallery-row">
 					<div class="col-4 photo-7 gallery-photo" alt="zdjęcie produktu"><p class="photo-info">Opaska - 15zł</p></div>
 					<div class="col-4 photo-8 gallery-photo" alt="zdjęcie produktu"><p class="photo-info--hit">HIT! Opaska - 15zł</p></div>
-					<div class="col-4 photo-9 gallery-photo" alt="zdjęcie produktu"><p class="photo-info">Korona Księżniczki - 30zł</p></div>
+					<div class="col-4 photo-9 gallery-photo" alt="zdjęcie produktu" id="crown"><p class="photo-info">Korona Księżniczki - 30zł</p></div>
 				</div>
 				<div class="row gallery-row">
 					<div class="col-4 photo-10 gallery-photo" alt="zdjęcie produktu"><p class="photo-info">Opaska brokatowa - 15zł!</p></div>
-					<div class="col-4 photo-11 gallery-photo" alt="zdjęcie produktu"><p class="photo-info--new">NOWOŚĆ! Opaska Modnisi - 20zł</p></div>
+					<div class="col-4 photo-11 gallery-photo" alt="zdjęcie produktu" id="band"><p class="photo-info--new">NOWOŚĆ! Opaska Modnisi - 20zł</p></div>
 					<div class="col-4 photo-12 gallery-photo" alt="zdjęcie produktu"><p class="photo-info">Opaska brokatowa - 15zł!</p></div>
 				</div>
 
 			</section>
 		</div>
 		<div class="row">
-			<section class="col-12 blog">
-				blog
+			<section class="col-12 blog" id="blog">
+				<h3 class="blog-header">Blog Petite Princesse</h2>
+				<hr></hr>
+				<hr></hr>
+				<article class="blog-trailer">
+					<h3 class="blog-trailer--header">Dreszczyk emocji...</h2>
+						<img class="blog-trailer--logo" src="pics/logo.png" alt="logo">
+					<p class="blog-trailer--txt">
+						Zaczynam - z amatorskim sklepikiem i blogiem parentingowym! Do dzieła! Avanti Petite Princesse! W końcu po miesiącach przygotowań ruszam w bezkres Internetu by podzielić się z Wami moją pasją do tworzenia pięknych ozdób dla dziewczynek. Czuję się mniej więcej jak przed wyruszeniem na długą wyprawę w Bieszczady. Pomijając wszystkie dolegliwości, tak samo czułam się po zajściu w ciążę. Rozpoczyna się wielka przygoda. Wszystkie najważniejsze rzeczy gotowe, ale w głowie powstaje pytanie...
+					</p>
+					<a href="#" class="blog-trailer--btn">Czytaj więcej>></a>
+				</article>
+				<hr></hr>
+				<hr></hr>
 			</section>
 		</div>
 		<div class="row">
-			<section class="col-6 about">
+			<section class="col-6 about" id="about">
 				<div class="col-4 about-photo"></div>
 				<h2 class="about-header">O mnie</h2>
 				<p class="about-info">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Kobieta wielu talentów - podróżniczka, bankierka, snowboardzistka, miłośniczka stylu skandynawskiego w dekoracji, aspirująca do miana Perfekcyjnej Pani Domu - jeśli by nie liczyć tych wszystkich porażek kulinarnych i ściany w kuchni niedomytej po wybuchu słoików z zaprawami ;-) Teraz próbuję swoich sił w Internecie - jako Mama-Blogerka i właściciel (jak to dumnie brzmi) własnej manufaktury - Petite Princesse.
 					<br><br>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Prywatnie Mama, Żona i właścicielka psiaka. Lubię czytać kryminały i reportaże. Mam silne ciągoty do dekoracji wnętrz, projektowania ogrodów, układania kwiatów, tworzenia rzeczy pięknych, które pokazują piękno tego kto ich używa. Stąd mój pomysł na Petite Princesse. Tworzyć dodatki dla małych dziewczynek, które uczynią z nich Małe Królewny.
+					<br><br>
+					Pozdrawiam Was Kochane i do napisania!
 				</p>
 			</section>
-			<section class="col-6 contact">
+			<section class="col-6 contact" id="contact">
 				<h2 class="contact-header">Zamów coś... lub po prostu napisz <i class="heartbeat fas fa-envelope"></i></h2>
 				<form class="contact-form" action="index.html" method="post">
 					<fieldset class="contact-form--fieldset">
-						<p class="contact-form--label">
-			        <label for="name">
-			          <span>Imię i nazwisko: </span>
-			        </label>
+						<div class="contact-form--label col-6">
+			        <label for="name">Imię i nazwisko:</label>
 			        <input type="text" id="name" name="username" class="contact-form--input">
-			      </p>
-			      <p class="contact-form--label">
-			        <label for="mail">
-			          <span>E-mail: </span>
-			        </label>
+			      </div>
+						<div class="contact-form--label col-6">
+			        <label for="name">E-mail:</label>
 			        <input type="email" id="mail" name="usermail" class="contact-form--input">
-			      </p>
-						<p class="contact-form--label">
-			        <label for="mail">
-			          <span>Napisz wiadomość:</span>
-			        </label>
-							<textarea name="comment" form="usrform" class="contact-form--textarea">
-								Enter text here...
+			      </div>
+						<div class="contact-form--label col-12">
+			        <label for="mail">Napisz wiadomość:</label>
+							<textarea name="comment" form="usrform" class="contact-form--textarea" placeholder="Napisz coś ;-)">
 							</textarea>
-			      </p>
+			      </div>
 					</fieldset>
-
+						<button class="contact-btn "type="submit" name="send">Wyślij wiadomość</button>
 			</form>
 			</section>
 		</div>
@@ -169,35 +176,35 @@
 				<div class="listColumn">
 					<ul class="column">
 						<p class="column-header">Warto sprawdzić:</p>
-						<li class="item"><a href="https://mamotoja.pl/male-dziecko.html">Blog</a></li>
-						<li class="item"><a href="https://prawakonsumenta.uokik.gov.pl/">Mamo to ja</a></li>
-						<li class="item"><a href="#">Prawa Konsumenta</a></li>
+						<li class="item"><a href="#blog">Blog</a></li>
+						<li class="item"><a href="#header">Wróć do początku</a></li>
+						<li class="item"><a href="https://prawakonsumenta.uokik.gov.pl/">Prawa Konsumenta</a></li>
 					</ul>
 				</div>
 				<div class="listColumn">
 					<ul class="column">
 						<p class="column-header">Skontaktuj się ze mną!</p>
-						<li class="item"><a href="#">O mnie</a></li>
-						<li class="item"><a href="#">Kontakt</a></li>
-						<li class="item"><a href="#">Odbiór osobisty</a></li>
+						<li class="item"><a href="#about">O mnie</a></li>
+						<li class="item"><a href="#contact">Kontakt</a></li>
+						<li class="item"><a href="#shop">Najnowsze</a></li>
 					</ul>
 				</div>
 			</div>
 		<div class="rightSide">
 			<div class="media">
-				<a href="#">
+				<a href="https://www.facebook.com/groups/1379682628812803/" target="_blank">
 					<span class="media-icon fab fa-facebook-square fa-3x" aria-hidden="true"></span>
 					<p>Facebook</p>
 				</a>
 			</div>
 			<div class="media">
-				<a href="#">
+				<a href="https://twitter.com/?lang=pl" target="_blank">
 					<span class="media-icon fab fa-twitter-square fa-3x" aria-hidden="true"></span>
 					<p>Twitter</p>
 				</a>
 			</div>
 			<div class="media">
-				<a href="#">
+				<a href="https://plus.google.com/" target="_blank">
 					<span class="media-icon fab fa-google-plus-square fa-3x" aria-hidden="true"></span>
 					<p>Google+</p>
 				</a>

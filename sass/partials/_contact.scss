@@ -3,31 +3,48 @@
   "../mixins",
   "../animations";
 
+.contact {
+  @include    aboutContact;
+  font-size : 1rem;
 
-  .contact {
-    @include aboutContact;
-    font-size: 1rem;
-    .contact-header {
-      font-size: 2em;
-    }
-    .contact-form {
-      .contact-form--fieldset{
-        margin-top: 30px;
-        .contact-form--label {
-          font-size: 1rem;
-          .contact-form--input {
-
-          }
-          .contact-form--textarea{
-
-          }
-        }
-    }
-
-    }
+  .contact-header {
+    font-size : 2em;
   }
 
+  .contact-form {
+    margin-top : 30px;
+    padding    : 10px;
+
+    .contact-form--fieldset {
+      border : none;
+
+      .contact-form--label {
+        font-size : 1rem;
+
+        .contact-form--input {
+          @include     aboutContact;
+          width      : 100%;
+          margin-top : 10px;
+        }
+
+        .contact-form--textarea {
+          @include     aboutContact;
+          width      : 100%;
+          height     : 205px;
+          margin-top : 10px;
+        }
+      }
+    }
+
+    .contact-btn {
+      @include   Btn;
+      margin   : 5px auto;
+      color    : $color-txt;
+      cursor   : pointer;
+    }
+  }
+}
 
 .heartbeat {
-  @include heartbeat; 
+  @include heartbeat;
 }

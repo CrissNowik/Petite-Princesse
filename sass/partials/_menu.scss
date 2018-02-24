@@ -1,55 +1,64 @@
-@import "../colors";
-@import "../animations";
-@import "../mixins";
+@import
+  "../colors",
+  "../mixins",
+  "../animations";
 
 .menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+  display         : flex;
+  justify-content : center;
+  list-style      : none;
+
   .menu-item {
-    margin: auto 5px;
-    text-align: center;
-    background-color: #fff;
-    border: 1px solid $color-items;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    @include shadow;
+    @include           shadow;
+    display          : flex;
+    margin           : auto 5px;
+    border           : 1px solid $color-items;
+    border-radius    : 10px;
+    background-color : #fff;
+    text-align       : center;
+    justify-content  : center;
+
     &:hover>.submenu {
-      display: flex;
-      flex-flow: column;
-      margin-top: 35px;
-      position: absolute;
-      list-style: none;
-      @include animateSubmenu;
-      z-index: 3;
+      @include     animateSubmenu;
+      z-index    : 3;
+      display    : flex;
+      position   : absolute;
+      margin-top : 35px;
+      flex-flow  : column;
+      list-style : none;
     }
+
     &:hover {
-      background-color: $color-items;
+      background-color : $color-items;
     }
+
     a {
-      font-size: 1rem;
-      color: $color-txt;
-      text-decoration: none;
+      color           : $color-txt;
+      text-decoration : none;
+      font-size       : 1rem;
     }
+
     .submenu {
-      margin-top: 12px;
-      display: none;
+      display    : none;
+      margin-top : 12px;
+
       .submenu-item {
-        background-color: $color-items;
-        border: 1px solid #fff;
-        border-radius: 10px;
-        padding: 5px;
-        margin: auto;
-        width:250px;
-        @include shadow;
-        a{
-          font-size: 1rem;
+        @include           shadow;
+        width            : 250px;
+        margin           : auto;
+        padding          : 5px;
+        border           : 1px solid #fff;
+        border-radius    : 10px;
+        background-color : $color-items;
+
+        a {
+          font-size : 1rem;
+
           &:hover {
-              color: $color-txt-hover;
-            }
+            color : $color-txt-hover;
           }
         }
       }
     }
+  }
 }
