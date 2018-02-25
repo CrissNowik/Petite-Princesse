@@ -31,7 +31,7 @@ $(document).ready(function(){
 // end of main slider by OwlCarousel2
 
 // smooth scrolling
-$('a[href^="#"]').on('click',function (e) {
+  $('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 
 	    var target = this.hash;
@@ -45,5 +45,29 @@ $('a[href^="#"]').on('click',function (e) {
 	});
 // end smooth scrolling
 
+//ordering items
+//
+var shopingList = [];
+$('.gallery-photo').on('click', function (e){
+  e.preventDefault();
+
+  function adToList(x) {
+    shopingList.push(x);
+    shopingList.push('\n');
+    return shopingList;
+  };
+
+  var item = $(this).data().item.toString();
+  adToList(item)
+  // shopingList.replace(/(,\s*)+/, ',');
+  console.log("lista: ", shopingList);
+
+  var form = $('.contact-form--textarea').val("Hej, Zamawiam następujące towary: " + '\n' + shopingList);
+   $('.contact-form--textarea').html($('.contact-form--textarea').text().replace(/\n\r?/g, '<br />'));
+})
+
+//end of ordering items
+//
+//
 
 }); /*doc.ready.func END*/
