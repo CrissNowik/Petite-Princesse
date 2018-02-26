@@ -46,7 +46,7 @@ $(document).ready(function(){
 // end smooth scrolling
 
 //ordering items
-//
+
 var shopingList = [];
 $('.gallery-photo').on('click', function (e){
   e.preventDefault();
@@ -57,17 +57,14 @@ $('.gallery-photo').on('click', function (e){
     return shopingList;
   };
 
-  var item = $(this).data().item.toString();
+  var item = $(this).data().item;
   adToList(item)
-  // shopingList.replace(/(,\s*)+/, ',');
-  console.log("lista: ", shopingList);
 
-  var form = $('.contact-form--textarea').val("Hej, Zamawiam następujące towary: " + '\n' + shopingList);
-   $('.contact-form--textarea').html($('.contact-form--textarea').text().replace(/\n\r?/g, '<br />'));
+    $('.contact-form--textarea').val("Hej, Zamawiam następujące towary:" + '\n' + " " + shopingList.join(" "));
+    $('.contact-form--textarea').html($('.contact-form--textarea').text().replace(/\n\r?/g, '<br/>'));
 })
 
 //end of ordering items
-//
-//
+
 
 }); /*doc.ready.func END*/
