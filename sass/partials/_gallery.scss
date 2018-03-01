@@ -38,12 +38,12 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
       display     : flex;
       border      : 1px solid $color-items;
       align-items : flex-end;
-      cursor      : pointer;
 
       .photo-info {
         @include           photoInfo;
         color            : $color-txt;
         background-color : rgba(249, 139, 249, 0.6);
+        cursor           : pointer;
       }
 
       .photo-info--new {

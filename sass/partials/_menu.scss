@@ -8,6 +8,10 @@
   justify-content : center;
   list-style      : none;
 
+  .menu-mobile {
+    display: none;
+  }
+
   .menu-item {
     @include           shadow;
     display          : flex;
