@@ -45,3 +45,16 @@
     }
   }
 }
+
+// media queries
+
+@media screen and (max-width : 430px) {
+  .blog {
+    .blog-trailer {
+      .blog-trailer--logo{
+        float      : left;
+        padding    : 10px;
+      }
+    }
+  }
+}

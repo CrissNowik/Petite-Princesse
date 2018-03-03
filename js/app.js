@@ -29,10 +29,6 @@ $(document).ready(function(){
     }
 });
 
-if (window.matchMedia("(max-width: 1120px)").matches) {
-    $('.main-slider > div.col-11').removeClass('col-11').addClass('col-12');
-}
-
 
 //END main slider by OwlCarousel2
 //
