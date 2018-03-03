@@ -1,5 +1,66 @@
 @import "animations";
 
+@mixin Btn {
+  @include           center;
+  @include           shadow;
+  margin           : 5px;
+  padding          : 0px 20px;
+  border           : 1px solid $color-items;
+  border-radius    : 10px;
+  background-color : #fff;
+  font-size        : 1rem;
+
+  &:hover {
+    @include           animateBtn;
+    background-color : $color-items;
+  }
+}
+
+@mixin aboutContact {
+  @include           shadow;
+  margin-top       : 30px;
+  padding          : 10px;
+  color            : $color-txt;
+  border           : 1px solid $color-items;
+  border-radius    : 15px;
+  background-color : #fff;
+  font-size        : 1rem;
+}
+
+@mixin center {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+}
+
+@mixin gradientPrefix {
+  background-image : -webkit-gradient(linear, right top, left bottom, from(#ffffff), color-stop(#f7f1ff), color-stop(#f5e2ff), color-stop(#f7d1ff), to(#fcbffc));
+  background-image : -webkit-linear-gradient(
+                       right top,
+                       #ffffff,
+                       #f7f1ff,
+                       #f5e2ff,
+                       #f7d1ff,
+                       #fcbffc
+                     );
+  background-image : -o-linear-gradient(
+                       right top,
+                       #ffffff,
+                       #f7f1ff,
+                       #f5e2ff,
+                       #f7d1ff,
+                       #fcbffc
+                     );
+  background-image : linear-gradient(
+                       to left bottom,
+                       #ffffff,
+                       #f7f1ff,
+                       #f5e2ff,
+                       #f7d1ff,
+                       #fcbffc
+                     );
+}
+
 @mixin menu {
   display         : flex;
   justify-content : center;
@@ -7,6 +68,14 @@
 }
 
 @mixin menu-item {
+  border           : 1px solid $color-items;
+  border-radius    : 10px;
+  background-color : #fff;
+  text-align       : center;
+  justify-content  : center;
+}
+
+@mixin menu-item-sub {
   &:hover>.submenu {
     @include     animateSubmenu;
     z-index    : 3;
@@ -51,62 +120,12 @@
   }
 }
 
-@mixin Btn {
-  @include           center;
-  @include           shadow;
-  margin           : 5px;
-  padding          : 0px 20px;
-  border           : 1px solid $color-items;
-  border-radius    : 10px;
-  background-color : #fff;
-  font-size        : 1rem;
-
-  &:hover {
-    @include           animateBtn;
-    background-color : $color-items;
-  }
-}
-
-@mixin center {
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
-}
-
-@mixin gradientPrefix {
-  background-image : -webkit-gradient(linear, right top, left bottom, from(#ffffff), color-stop(#f7f1ff), color-stop(#f5e2ff), color-stop(#f7d1ff), to(#fcbffc));
-  background-image : -webkit-linear-gradient(
-                       right top,
-                       #ffffff,
-                       #f7f1ff,
-                       #f5e2ff,
-                       #f7d1ff,
-                       #fcbffc
-                     );
-  background-image : -o-linear-gradient(
-                       right top,
-                       #ffffff,
-                       #f7f1ff,
-                       #f5e2ff,
-                       #f7d1ff,
-                       #fcbffc
-                     );
-  background-image : linear-gradient(
-                       to left bottom,
-                       #ffffff,
-                       #f7f1ff,
-                       #f5e2ff,
-                       #f7d1ff,
-                       #fcbffc
-                     );
-}
-
 @mixin photoInfo {
-  width         : 100%;
-  padding       : 10px;
-  border-radius : 15px;
-  text-align    : center;
-  text-decoration: none;
+  width           : 100%;
+  padding         : 10px;
+  border-radius   : 15px;
+  text-align      : center;
+  text-decoration : none;
 }
 
 @mixin reset {
@@ -121,15 +140,4 @@
   -moz-box-shadow    : 11px 13px 9px 4px rgba(162,45,162,0.50);
   -webkit-box-shadow : 11px 13px 9px 4px rgba(162,45,162,0.50);
   box-shadow         : 11px 13px 9px 4px rgba(162,45,162,0.50);
-}
-
-@mixin aboutContact {
-  @include           shadow;
-  margin-top       : 30px;
-  padding          : 10px;
-  color            : $color-txt;
-  border           : 1px solid $color-items;
-  border-radius    : 15px;
-  background-color : #fff;
-  font-size        : 1rem;
 }
