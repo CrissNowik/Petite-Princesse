@@ -3,19 +3,30 @@
   "../mixins",
   "../animations";
 
-.menu {
-  display         : flex;
-  justify-content : center;
-  list-style      : none;
+.menu-mobile {
+  @include   Btn;
+  display  : none;
+  color    : $color-txt;
+  cursor   : pointer;
+}
 
-  .menu-mobile {
-    display: none;
+.menu-mobile--drop {
+  @include   menu;
+  display  : none;
+
+  .menu-item--mobi {
+    display : none;
   }
+}
+
+.menu {
+  @include   menu;
 
   .menu-item {
     @include           shadow;
     display          : flex;
-    margin           : auto 5px;
+    min-width        : 186px;
+    margin           : 5px 5px;
     border           : 1px solid $color-items;
     border-radius    : 10px;
     background-color : #fff;
@@ -63,6 +74,59 @@
           }
         }
       }
+    }
+  }
+}
+// media queries
+@media
+  screen
+  and (max-width : 1120px) {
+  .menu {
+    flex-wrap : wrap;
+
+    .menu-item {
+      margin : 0px 0px;
+    }
+  }
+}
+
+@media
+  screen
+  and (max-width : 560px) {
+  .menu-mobile {
+    display : flex;
+    width   : 200px;
+    height  : 50px;
+  }
+
+  .menu-mobile--drop {
+    z-index   : 10;
+    display   : none;
+    position  : absolute;
+    width     : 360px;
+    margin    : 55px auto 0 auto;
+    flex-flow : column;
+
+    .menu-item--mobi {
+      @include           shadow;
+      display          : flex;
+      min-width        : 360px;
+      margin           : 0;
+      border           : 1px solid $color-items;
+      border-radius    : 10px;
+      background-color : #fff;
+      text-align       : center;
+      justify-content  : center;
+      @include menu-item;
+    }
+  }
+
+  .menu {
+    flex-wrap       : wrap;
+    justify-content : center;
+
+    .menu-item {
+      display : none;
     }
   }
 }

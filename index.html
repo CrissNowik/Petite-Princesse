@@ -7,43 +7,74 @@
 		<meta name="viewport" content="initial-scale=1">
 			<title>Petite Princesse</title>
 		<link rel="stylesheet" href="css/style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="libs/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="libs/OwlCarousel2-2.2.1/dist/assets/owl.theme.defalit.min.css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 	<body>
   <header id="header" class="container header">
-    <div class="row">
+    <div class="row toplogo">
       <div class="col-12 logo">
         <img src="pics/logo.png" alt="Logo: Text Petite Pincesse with Crown">
       </div>
     </div>
-    <nav class="row menu" id="drop">
+    <nav class="row menu" id="full">
+	<!-- mobile menu -->
 				<p class="menu-mobile" id="hamburger">MENU</p>
-	      <ul class="col-2 menu-item">
-	        <p><a href="#header"><i class="fas fa-home"></i> Strona główna</a></p>
-	      </ul>
-	      <ul class="col-2 menu-item">
-	        <p><a href="#shop"><i class="fas fa-certificate"></i> Najnowsze</a></p>
-	        <ul class="submenu">
-	          <li class="submenu-item"><a href="#bow">Kokardki</a></li>
-	          <li class="submenu-item"><a href="#band">Opaski</a></li>
-	          <li class="submenu-item"><a href="#crown">Korony</a></li>
-	          <li class="submenu-item"><a href="#gum">Gumki</a></li>
-	        </ul>
-	      </ul>
-	      <ul class="col-2 menu-item">
-	        <p><a href="#shop"><i class="fas fa-camera"></i> Galeria</a></p>
-	      </ul>
-	      <ul class="col-2 menu-item">
-	        <p><a href="#blog"><i class="fas fa-book"></i> Blog</a></p>
-	      </ul>
-	      <ul class="col-2 menu-item">
-	        <p><a href="#about"><i class="fas fa-user"></i> O mnie</a></p>
-	      </ul>
-	      <ul class="col-2 menu-item">
-	        <p><a href="#contact"><i class="fas fa-phone"></i> Kontakt</a></p>
-	      </ul>
+				<ul class="menu-mobile--drop">
+					<li class="col-2 menu-item--mobi">
+					 <p><a href="#header"><i class="fas fa-home"></i> Strona główna</a></p>
+				 </li>
+				 <li class="col-2 menu-item--mobi">
+					 <p><a href="#shop"><i class="fas fa-certificate"></i> Najnowsze</a></p>
+					 <ul class="submenu">
+						 <li class="submenu-item"><a href="#bow">Kokardki</a></li>
+						 <li class="submenu-item"><a href="#band">Opaski</a></li>
+						 <li class="submenu-item"><a href="#crown">Korony</a></li>
+						 <li class="submenu-item"><a href="#gum">Gumki</a></li>
+					 </ul>
+				 </li>
+				 <li class="col-2 menu-item--mobi">
+					 <p><a href="#shop"><i class="fas fa-camera"></i> Galeria</a></p>
+				 </li>
+				 <li class="col-2 menu-item--mobi">
+					 <p><a href="#blog"><i class="fas fa-book"></i> Blog</a></p>
+				 </li>
+				 <li class="col-2 menu-item--mobi">
+					 <p><a href="#about"><i class="fas fa-user"></i> O mnie</a></p>
+				 </li>
+				 <li class="col-2 menu-item--mobi">
+					 <p><a href="#contact"><i class="fas fa-phone"></i> Kontakt</a></p>
+				 </li>
+				</ul>
+<!-- end mobile menu	 -->
+				<ul class="menu">
+					<li class="col-2 menu-item">
+					 <p><a href="#header"><i class="fas fa-home"></i> Strona główna</a></p>
+				 </li>
+				 <li class="col-2 menu-item">
+					 <p><a href="#shop"><i class="fas fa-certificate"></i> Najnowsze</a></p>
+					 <ul class="submenu">
+						 <li class="submenu-item"><a href="#bow">Kokardki</a></li>
+						 <li class="submenu-item"><a href="#band">Opaski</a></li>
+						 <li class="submenu-item"><a href="#crown">Korony</a></li>
+						 <li class="submenu-item"><a href="#gum">Gumki</a></li>
+					 </ul>
+				 </li>
+				 <li class="col-2 menu-item">
+					 <p><a href="#shop"><i class="fas fa-camera"></i> Galeria</a></p>
+				 </li>
+				 <li class="col-2 menu-item">
+					 <p><a href="#blog"><i class="fas fa-book"></i> Blog</a></p>
+				 </li>
+				 <li class="col-2 menu-item">
+					 <p><a href="#about"><i class="fas fa-user"></i> O mnie</a></p>
+				 </li>
+				 <li class="col-2 menu-item">
+					 <p><a href="#contact"><i class="fas fa-phone"></i> Kontakt</a></p>
+				 </li>
+				</ul>
     </nav>
   </header>
 
@@ -142,7 +173,7 @@
 				<div class="col-4 about-photo"></div>
 				<h2 class="about-header">O mnie</h2>
 				<p class="about-info">
-					Kobieta wielu talentów - podróżniczka, bankierka, snowboardzistka, miłośniczka stylu skandynawskiego w dekoracji, aspirująca do miana Perfekcyjnej Pani Domu - jeśli by nie liczyć tych wszystkich porażek kulinarnych i ściany w kuchni niedomytej po wybuchu słoików z zaprawami ;-) Teraz próbuję swoich sił w Internecie - jako Mama-Blogerka i właściciel (jak to dumnie brzmi) własnej manufaktury - Petite Princesse.
+					Kobieta wielu talentów - podróżniczka, bankierka, snowboardzistka, miłośniczka stylu skandynawskiego w dekoracji, aspirująca do miana Perfekcyjnej Pani Domu - jeśli by nie liczyć tych wszystkich porażek kliinarnych i ściany w kuchni niedomytej po wybuchu słoików z zaprawami ;-) Teraz próbuję swoich sił w Internecie - jako Mama-Blogerka i właściciel (jak to dumnie brzmi) własnej manufaktury - Petite Princesse.
 					<br><br>
 					Prywatnie Mama, Żona i właścicielka psiaka. Lubię czytać kryminały i reportaże. Mam silne ciągoty do dekoracji wnętrz, projektowania ogrodów, układania kwiatów, tworzenia rzeczy pięknych, które pokazują piękno tego kto ich używa. Stąd mój pomysł na Petite Princesse. Tworzyć dodatki dla małych dziewczynek, które uczynią z nich Małe Królewny.
 					<br><br>
@@ -221,7 +252,6 @@
 			<p> &copy; Created by <a href="https://github.com/CrissNowik" target="_blank"> CrissNowik</a></p>
 		</div>
 	</footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 				<script src="libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 				<script src="js/app.js" type="text/javascript"></script>
 	</body>

@@ -12,7 +12,7 @@
   "mixins",
   "colors";
 
- 
+
 * {
   @include      reset;
   font-family : 'Itim',
@@ -31,6 +31,7 @@ body {
                        #f7d1ff,
                        #fcbffc
                      );
+  background-repeat:repeat;
 }
 
 .logo {

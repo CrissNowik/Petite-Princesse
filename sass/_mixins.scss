@@ -1,5 +1,56 @@
 @import "animations";
 
+@mixin menu {
+  display         : flex;
+  justify-content : center;
+  list-style      : none;
+}
+
+@mixin menu-item {
+  &:hover>.submenu {
+    @include     animateSubmenu;
+    z-index    : 3;
+    display    : flex;
+    position   : absolute;
+    margin-top : 35px;
+    flex-flow  : column;
+    list-style : none;
+  }
+
+  &:hover {
+    background-color : $color-items;
+  }
+
+  a {
+    color           : $color-txt;
+    text-decoration : none;
+    font-size       : 1rem;
+  }
+
+  .submenu {
+    display    : none;
+    margin-top : 12px;
+
+    .submenu-item {
+      @include           shadow;
+      width            : 250px;
+      margin           : auto;
+      padding          : 5px;
+      border           : 1px solid #fff;
+      border-radius    : 10px;
+      background-color : $color-items;
+
+      a {
+        font-size : 1rem;
+
+        &:hover {
+          color : $color-txt-hover;
+        }
+      }
+    }
+  }
+}
+
 @mixin Btn {
   @include           center;
   @include           shadow;
@@ -9,7 +60,7 @@
   border-radius    : 10px;
   background-color : #fff;
   font-size        : 1rem;
- 
+
   &:hover {
     @include           animateBtn;
     background-color : $color-items;
