@@ -13,21 +13,27 @@ $(document).ready(function(){
     responsive:{
         0:{
             items:1,
-            nav:true,
+            nav:false,
             autoplay: true,
         },
-        600:{
+        560:{
             items:1,
             nav:true,
             autoplay: true,
         },
-        1000:{
+        1120:{
             items:1,
             nav:true,
             autoplay: true,
         }
     }
-})
+});
+
+if (window.matchMedia("(max-width: 1120px)").matches) {
+    $('.main-slider > div.col-11').removeClass('col-11').addClass('col-12');
+}
+
+
 //END main slider by OwlCarousel2
 //
 //ordering items
