@@ -7,11 +7,13 @@
   display         : flex;
   margin-top      : 50px;
   align-items     : center;
+  flex-wrap       : wrap;
   justify-content : space-around;
 
   .box-item {
     @include           shadow;
     display          : flex;
+    min-width        : 340px;
     height           : 400px;
     color            : $color-txt;
     border           : 10px double $color-txt;
@@ -37,12 +39,12 @@
     }
 
     .box-item--btn {
-      @include   Btn;
-      margin   : 20px auto;
-      padding  : 10px;
-      color    : $color-txt;
-      cursor   : pointer;
-      text-decoration: none;
+      @include          Btn;
+      margin          : 20px auto;
+      padding         : 10px;
+      color           : $color-txt;
+      text-decoration : none;
+      cursor          : pointer;
     }
 
     .icon {
@@ -76,25 +78,39 @@
   }
 
   .welcome-btn {
-    @include   Btn;
-    margin   : 20px auto;
-    padding  : 15px 45px;
-    color    : $color-txt;
-    cursor   : pointer;
-    text-decoration: none;
+    @include          Btn;
+    margin          : 20px auto;
+    padding         : 15px 45px;
+    color           : $color-txt;
+    text-decoration : none;
+    cursor          : pointer;
   }
 }
 
 // media queries
 
-@media screen and (max-width : 1133px) {
+@media
+  screen
+  and (max-width : 1033px) {
+  .box {
+    margin-top      : 10px;
+    justify-content : center;
 
+    .box-item {
+      margin : 10px;
+    }
+  }
 }
 
-@media screen and (max-width : 1033px) {
+@media
+  screen
+  and (max-width : 700px) {
+  .box {
+    margin-top      : 0;
+    justify-content : center;
 
-}
-
-@media screen and (max-width : 700px) {
-
+    .box-item {
+      margin-top : 10px;
+    }
+  }
 }
