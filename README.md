@@ -20,7 +20,7 @@ Website for small manufacture which creates lovelly ribbons, headbands and other
 7. Have fun! 
 
 ### Demo:
-https://crissnowik.github.io/Petite-Princesse/
+https://crissnowik.github.io/Petite_Princesse-website/
 
 ### Copyright:
 CrissNowik
