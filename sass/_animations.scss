@@ -123,6 +123,11 @@
   transition : 1.5s ease-in-out;
 }
 
+@mixin gentleShow2 {
+  transform  : scale(1.1,1.1);
+  transition : 1.5s ease-in-out;
+}
+
 @mixin heartbeat {
   -webkit-animation : heartbeat 2s ease-in-out infinite both;
   animation         : heartbeat 2s ease-in-out infinite both;
@@ -204,6 +209,11 @@
       transform                         : scale(1);
     }
   }
+}
+
+@mixin noGentleShow {
+  transform  : scale(1,1);
+  transition : 1s ease-in-out;
 }
 
 /**

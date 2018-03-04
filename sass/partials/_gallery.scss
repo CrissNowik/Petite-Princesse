@@ -16,10 +16,6 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
     background-image    : url("../../pics/gallery/photo-#{$var}.jpg");
     background-position : center;
     background-size     : cover;
-
-    &:hover {
-      @include gentleShow;
-    }
   }
 }
 
@@ -38,6 +34,10 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
       display     : flex;
       border      : 1px solid $color-items;
       align-items : flex-end;
+
+      &:hover {
+        @include gentleShow;
+      }
 
       .photo-info {
         @include           photoInfo;
@@ -67,13 +67,53 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
   }
 }
 
-
 // media queries
 
-@media screen and (max-width : 1120px) {
+@media
+  screen
+  and (max-width : 1120px) {
+  .gallery {
+    .gallery-header {
+      text-align : center;
+      font-size  : 2rem;
+    }
 
+    .gallery-row {
+      flex-wrap       : wrap;
+      justify-content : center;
+
+      .gallery-photo {
+        min-width : 400px;
+
+        &:hover {
+          @include gentleShow2;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width : 560px) {
+@media
+  screen
+  and (max-width : 560px) {
+  .gallery {
+    .gallery-header {
+      text-align : center;
+      font-size  : 1.5rem;
+    }
 
+    .gallery-row {
+      flex-wrap       : wrap;
+      justify-content : center;
+
+      .gallery-photo {
+        min-width : 340px;
+        margin    : 10px;
+
+        &:hover {
+          @include noGentleShow;
+        }
+      }
+    }
+  }
 }

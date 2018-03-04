@@ -5,10 +5,12 @@
 
 .contact {
   @include    aboutContact;
+  width     : 50%;
   font-size : 1rem;
 
   .contact-header {
-    font-size : 2em;
+    text-align : center;
+    font-size  : 2em;
   }
 
   .contact-form {
@@ -38,7 +40,7 @@
 
     .contact-btn {
       @include   Btn;
-      margin   : 5px auto;
+      margin   : 10px auto;
       color    : $color-txt;
       cursor   : pointer;
     }
@@ -51,10 +53,91 @@
 
 // media queries
 
-@media screen and (max-width : 1120px) {
+@media
+  screen
+  and (max-width : 1024px) {
+  .contact {
+    display        : flex;
+    width          : 100%;
+    flex-direction : column;
+    flex-wrap      : wrap;
+    order          : 2;
 
+    .contact-header {
+      width      : 100%;
+      text-align : center;
+      order      : 1;
+    }
+
+    .contact-form {
+      width     : 100%;
+      flex-wrap : wrap;
+      order     : 2;
+
+      .contact-form--label {
+        width     : 50%;
+        font-size : 1rem;
+      }
+
+      .fail {
+        width : 100%;
+      }
+    }
+  }
 }
 
-@media screen and (max-width : 560px) {
+@media
+  screen
+  and (max-width : 600px) {
+  .contact {
+    display        : flex;
+    width          : 100%;
+    flex-direction : column;
+    flex-wrap      : wrap;
+    order          : 2;
 
+    .contact-header {
+      width      : 100%;
+      text-align : center;
+      order      : 1;
+    }
+
+    .contact-form {
+      width     : 100%;
+      flex-wrap : wrap;
+      order     : 2;
+
+      .contact-form--label {
+        width     : 100%;
+        font-size : 1rem;
+      }
+    }
+  }
+}
+
+@media
+  screen
+  and (max-width : 460px) {
+  .contact {
+    display        : flex;
+    min-width      : 340px;
+    flex-direction : column;
+    order          : 2;
+
+    .contact-header {
+      text-align : center;
+      font-size  : 1.5rem;
+      order      : 1;
+    }
+
+    .contact-form {
+      flex-wrap : wrap;
+      order     : 2;
+
+      .contact-form--label {
+        width     : 100%;
+        font-size : 1rem;
+      }
+    }
+  }
 }

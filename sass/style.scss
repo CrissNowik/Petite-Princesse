@@ -12,7 +12,6 @@
   "mixins",
   "colors";
 
-
 * {
   @include      reset;
   font-family : 'Itim',
@@ -22,16 +21,16 @@
 }
 
 body {
-  @include           gradientPrefix;
-  background-image : linear-gradient(
-                       to left bottom,
-                       #ffffff,
-                       #f7f1ff,
-                       #f5e2ff,
-                       #f7d1ff,
-                       #fcbffc
-                     );
-  background-repeat:repeat;
+  @include            gradientPrefix;
+  background-image  : linear-gradient(
+                        to left bottom,
+                        #ffffff,
+                        #f7f1ff,
+                        #f5e2ff,
+                        #f7d1ff,
+                        #fcbffc
+                      );
+  background-repeat : repeat;
 }
 
 .logo {
@@ -41,4 +40,10 @@ body {
 hr {
   margin-bottom : 2px;
   border        : 1px solid $color-txt;
+}
+
+.about-contact {
+  display         : flex;
+  flex-wrap       : wrap;
+  justify-content : center;
 }
