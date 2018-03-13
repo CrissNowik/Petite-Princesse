@@ -11,7 +11,7 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
   .photo-#{$var} {
     @include              shadow;
     height              : 340px;
-    margin              : 10px;
+    // margin              : 10px;
     border-radius       : 5%;
     background-image    : url("../pics/gallery/photo-#{$var}.jpg");
     background-position : center;
@@ -30,38 +30,42 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
     display         : flex;
     justify-content : space-between;
 
-    .gallery-photo {
-      display     : flex;
-      border      : 1px solid $color-items;
-      align-items : flex-end;
+    .gallery-link {
+      text-decoration : none;
 
-      &:hover {
-        @include gentleShow;
-      }
+      .gallery-photo {
+        display     : flex;
+        border      : 1px solid $color-items;
+        align-items : flex-end;
 
-      .photo-info {
-        @include           photoInfo;
-        color            : $color-txt;
-        background-color : rgba(249, 139, 249, 0.6);
-        cursor           : pointer;
-      }
+        &:hover {
+          @include gentleShow;
+        }
 
-      .photo-info--new {
-        @include           photoInfo;
-        color            : $color-txt;
-        background-color : rgba(238, 246, 11, 0.6);
-      }
+        .photo-info {
+          @include           photoInfo;
+          color            : $color-txt;
+          background-color : rgba(249, 139, 249, 0.6);
+          cursor           : pointer;
+        }
 
-      .photo-info--hit {
-        @include           photoInfo;
-        color            : #fff;
-        background-color : rgba(255, 0, 0, 0.6);
-      }
+        .photo-info--new {
+          @include           photoInfo;
+          color            : $color-txt;
+          background-color : $color-txt-hover;
+        }
 
-      .photo-info--last {
-        @include           photoInfo;
-        color            : #fff;
-        background-color : rgba(162, 45, 162, 0.6);
+        .photo-info--hit {
+          @include           photoInfo;
+          color            : #fff;
+          background-color : $color-bgd;
+        }
+
+        .photo-info--last {
+          @include           photoInfo;
+          color            : #fff;
+          background-color : rgba(162, 45, 162, 0.6);
+        }
       }
     }
   }
