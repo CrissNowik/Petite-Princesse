@@ -85,12 +85,14 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
     .gallery-row {
       flex-wrap       : wrap;
       justify-content : center;
-
-      .gallery-photo {
+      .gallery-link{
+        display: flex;
         min-width : 400px;
-
-        &:hover {
-          @include gentleShow2;
+        .gallery-photo {
+          min-width : 400px;
+          &:hover {
+            @include gentleShow2;
+          }
         }
       }
     }
@@ -109,15 +111,20 @@ $list   : 1,2,3,4,5,6,7,8,9,10,11,12;
     .gallery-row {
       flex-wrap       : wrap;
       justify-content : center;
-
-      .gallery-photo {
+      .gallery-link{
+        display: flex;
         min-width : 340px;
         margin    : 10px;
+        padding: 0;
+        .gallery-photo {
+          min-width : 340px;
 
-        &:hover {
-          @include noGentleShow;
+          &:hover {
+            @include noGentleShow;
+          }
         }
       }
+
     }
   }
 }
