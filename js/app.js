@@ -51,6 +51,50 @@ $(document).ready(function() {
   })
   //END of ordering items
   //
+  // form validation
+
+  function checkName(){
+    let name = $('#name');
+    if (name.val().length > 2 && name.val().length < 31) {
+      if (name.val().includes("huj")) {
+        name.val("Nieładnie tak pisać;-)").css('color', 'red');
+      }
+    } else {
+      if (name.val().length < 3) {
+        name.val("Podaj pełne imię;-)").css('color', 'red');
+      } else if(name.val().length > 30) {
+        name.val("Skróć troszkę podpis ;-)").css('color', 'red');
+      }
+    }
+  };
+
+  function checkMail(){
+    let mail = $('#mail');
+    if (mail.val().length > 5 && mail.val().includes("@") && mail.val().length < 31) {
+    // TODO: msg in val()
+    } else {
+    // TODO: msg in val()
+    }
+  };
+
+  function checkMsg(){
+    let msg = $('#massage');
+    if (msg.val().length > 20 && msg.val().length < 1000) {
+      // TODO: msg in val()
+    } else {
+      // TODO: msg in val()
+    }
+  };
+
+$("#send-btn").click(function(e){
+    e.preventDefault();
+    checkName();
+    checkMail();
+    checkMsg();
+  });
+
+  // END of form validation
+  //
   // smooth scrolling
   $('a[href^="#"]').on('click', function(e) {
     e.preventDefault();
