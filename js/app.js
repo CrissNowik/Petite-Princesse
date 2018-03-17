@@ -46,10 +46,27 @@ $(document).ready(function() {
     let item = $(this).data().item;
     adToList(item)
 
-    $('.contact-form--textarea').val("Hej, Zamawiam następujące towary:" + '\n' + " " + shopingList.join(" "));
-    $('.contact-form--textarea').html($('.contact-form--textarea').text().replace(/\n\r?/g, '<br/>'));
+    $('#massage').val("Hej, Zamawiam następujące towary:" + '\n' + " " + shopingList.join(" "));
+    $('#massage').html($('.contact-form--textarea').text().replace(/\n\r?/g, '<br/>'));
   })
   //END of ordering items
+  //
+  // deleting issues from shopingList
+
+  function deletingShopingList() {
+    let txtArea = $('#massage');
+
+    txtArea.keyup(function(e){
+      if (e.which===8) {
+        shopingList = [];
+        shopingList.push(txtArea.val());
+      }
+      console.log("test", shopingList);
+    })
+  };
+
+  deletingShopingList();
+  // END of deleting issues from shopingList
   //
   // form validation
 
