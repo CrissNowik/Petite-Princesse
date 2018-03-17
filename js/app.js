@@ -53,45 +53,96 @@ $(document).ready(function() {
   //
   // form validation
 
-  function checkName(){
+  function checkName() {
     let name = $('#name');
-    if (name.val().length > 2 && name.val().length < 31) {
+    if (name.val().length > 2 &&
+      name.val().length < 31 &&
+      (
+        name.val() !== "Nieładnie tak pisać;-)" ||
+        name.val() !== "Podaj pełne imię;-)" ||
+        name.val() !== "Skróć troszkę podpis ;-)"
+      )
+    ) {
       if (name.val().includes("huj")) {
         name.val("Nieładnie tak pisać;-)").css('color', 'red');
       }
     } else {
       if (name.val().length < 3) {
         name.val("Podaj pełne imię;-)").css('color', 'red');
-      } else if(name.val().length > 30) {
+      } else if (name.val().length > 30) {
         name.val("Skróć troszkę podpis ;-)").css('color', 'red');
       }
     }
   };
 
-  function checkMail(){
+  function checkMail() {
     let mail = $('#mail');
-    if (mail.val().length > 5 && mail.val().includes("@") && mail.val().length < 31) {
-    // TODO: msg in val()
+    if (mail.val().length > 5 &&
+      mail.val().includes("@") &&
+      mail.val().length < 31 &&
+      (
+        mail.val() !== "Na pewno to prawidłowy adres?;-)" ||
+        mail.val() !== "Adres @ chyba jest niepełny;-)" ||
+        mail.val() !== "Zbyt długi adres e-mail ;-("
+      )
+    ) {
+      if (mail.val().includes("huj")) {
+        mail.val("Na pewno to prawidłowy adres?;-)").css('color', 'red');
+      }
     } else {
-    // TODO: msg in val()
+      if (mail.val().length < 6) {
+        mail.val("Adres @ chyba jest niepełny;-)").css('color', 'red');
+      } else if (mail.val().length > 30) {
+        mail.val("Zbyt długi adres e-mail ;-(").css('color', 'red');
+      }
     }
   };
 
-  function checkMsg(){
+  function checkMsg() {
     let msg = $('#massage');
-    if (msg.val().length > 20 && msg.val().length < 1000) {
-      // TODO: msg in val()
+    if (msg.val().length > 20 &&
+      msg.val().length < 1000 &&
+      (
+        msg.val() !== "Nieładnie tak pisać;-)" ||
+        msg.val() !== "Napisz coś więcej;-)"
+      )
+    ) {
+      if (msg.val().includes("huj")) {
+        msg.val("Nieładnie tak pisać;-)").css('color', 'red');
+      }
     } else {
-      // TODO: msg in val()
+      if (msg.val().length < 21) {
+        msg.val("Napisz coś więcej;-)").css('color', 'red');
+      }
     }
   };
 
-$("#send-btn").click(function(e){
+  function changeColor(inputName) {
+    inputName.focus(function() {
+      inputName.css('color', '#A22DA2');
+    })
+  };
+
+  function inputColors() {
+    let name = $('#name');
+    let mail = $('#mail');
+    let msg = $('#massage');
+
+    changeColor(name);
+    changeColor(mail);
+    changeColor(msg);
+  };
+
+  // requests:
+
+  $("#send-btn").click(function(e) {
     e.preventDefault();
     checkName();
     checkMail();
     checkMsg();
   });
+
+  inputColors();
 
   // END of form validation
   //
